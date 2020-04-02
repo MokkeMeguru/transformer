@@ -1,0 +1,7 @@
+/.DS_Store
+/.venv/
+*.ipynb
+*.en
+*.ja
+/images/
+/sample_submission.csv

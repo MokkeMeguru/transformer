@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+torch = "*"
+torchvision = "*"
+jupyterlab = "*"
+jupytext = "*"
+hydra-core = "*"
+tensorboardx = "*"
+mlflow = "*"
+nltk = "*"
+
+[requires]
+python_version = "3.7"
