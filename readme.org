@@ -18,6 +18,19 @@
 - [X] hydra conf
 - [X] optuna settings
 - [ ] mlflow settings
+
+* dataset form
+ - train/dev/test.en
+  #+begin_example
+  this is a example .
+  hello !
+  #+end_example
+ - train/dev.ja
+  #+begin_example
+  これ は 例 です 。
+  こんにち は 。
+  #+end_example
+
 * developper's guide
 ** unittest
   #+begin_src shell
