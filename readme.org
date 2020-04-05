@@ -4,22 +4,43 @@
 - [X] losses
 - [X] optimizers
 - [ ] conf
-- [5/8] models
-  - [ ] Encoder
-  - [ ] Decoder
+- [8/8] models
+  - [X] Encoder
+  - [X] Decoder
   - [X] MultiheadAttention
   - [X] PositionwiseFeedForward
   - [X] ScaledDotProdAttention
   - [X] PositionalEncoding
   - [X] Embedding
-  - [ ] share proj weight
-- [ ] task
+  - [X] share proj weight
+- [X] task
 - [X] data
+- [X] hydra conf
+- [X] optuna settings
+- [ ] mlflow settings
 * developper's guide
-  unittest
-
+** unittest
   #+begin_src shell
   python -m unittest discover
   #+end_src
+** single run to test one model
+   #+begin_src shell
+   python task.py --help
+   python task.py [some argument for update parameters]
+   #+end_src
+** multirun to change model
+   ref. hydra (facebook)
+   #+begin_src shell
+   python task.py --help
+   python task.py [some argument for update parameters with comma] -m
+   #+end_src
+** tune with optuna
+   ref. optuna (PFN)
+   #+begin_src shell
+   python gen_conf.py [some argument for update parameters] > optuna_args.yaml
+   (edit some line in tuning.py for your tuning parameter)
+   python tuninig.py
+   #+end_src
+
 * Thanks
 https://github.com/jadore801120/attention-is-all-you-need-pytorch
