@@ -1,0 +1,5 @@
+decoder:
+  num_layer: 2
+  num_head: 4
+  d_ff: 1024
+  dropout_rate: 0.1

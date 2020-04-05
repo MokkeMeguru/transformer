@@ -1,0 +1,38 @@
+basic:
+  ckpt_path: model.pth
+  paths:
+    ext:
+      en: en
+      ja: ja
+    prev_model: false
+    test_base: data/test
+    train_base: data/train
+    val_base: data/dev
+  src_max_seq_len: 25
+  test:
+    batch_size: 1
+  tgt_max_seq_len: 25
+  train:
+    batch_size: 128
+    num_epochs: 400
+  transformer:
+    d_model: 128
+    posencoding:
+      dropout_rate: 0.1
+    proj_share_weight: true
+  valid:
+    batch_size: 512
+  vocab:
+    num_src_vocab: -1
+    num_tgt_vocab: -1
+  warmup_step: 4000
+decoder:
+  d_ff: 1024
+  dropout_rate: 0.1
+  num_head: 4
+  num_layer: 2
+encoder:
+  d_ff: 1024
+  dropout_rate: 0.1
+  num_head: 4
+  num_layer: 2

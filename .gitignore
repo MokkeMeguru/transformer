@@ -5,3 +5,9 @@
 *.ja
 /images/
 /sample_submission.csv
+/__pycache__/
+*.pyc
+*.pth
+/multirun/
+/outputs/
+/summary/

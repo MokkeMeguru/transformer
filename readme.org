@@ -1,0 +1,25 @@
+* roadmap
+- [X] dataset
+- [X] metrics
+- [X] losses
+- [X] optimizers
+- [ ] conf
+- [5/8] models
+  - [ ] Encoder
+  - [ ] Decoder
+  - [X] MultiheadAttention
+  - [X] PositionwiseFeedForward
+  - [X] ScaledDotProdAttention
+  - [X] PositionalEncoding
+  - [X] Embedding
+  - [ ] share proj weight
+- [ ] task
+- [X] data
+* developper's guide
+  unittest
+
+  #+begin_src shell
+  python -m unittest discover
+  #+end_src
+* Thanks
+https://github.com/jadore801120/attention-is-all-you-need-pytorch
