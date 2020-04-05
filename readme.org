@@ -38,7 +38,7 @@
    ref. optuna (PFN)
    #+begin_src shell
    python gen_conf.py [some argument for update parameters] > optuna_args.yaml
-   (edit some line in tuning.py for your tuning parameter)
+   # (edit some line in tuning.py for your tuning parameter)
    python tuninig.py
    #+end_src
 
