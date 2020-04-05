@@ -1,0 +1,32 @@
+defaults:
+  - encoder
+  - decoder
+
+basic:
+  warmup_step: 4000
+  src_max_seq_len: 25
+  tgt_max_seq_len: 25
+  ckpt_path: "model.pth"
+  paths:
+    prev_model: false
+    train_base: "data/train"
+    val_base: "data/dev"
+    test_base: "data/test"
+    ext:
+      en: "en"
+      ja: "ja"
+  train:
+    batch_size: 128
+    num_epochs: 400
+  valid:
+    batch_size: 512
+  test:
+    batch_size: 1
+  transformer:
+    d_model: 128
+    proj_share_weight: true
+    posencoding:
+      dropout_rate: 0.1
+  vocab:
+    num_src_vocab: -1
+    num_tgt_vocab: -1

@@ -1,3 +1,17 @@
+def flatten_dict(dictionary, accumulator=None, parent_key=None, separator="."):
+    if accumulator is None:
+        accumulator = {}
+
+    for k, v in dictionary.items():
+        k = f"{parent_key}{separator}{k}" if parent_key else k
+        if isinstance(v, dict):
+            flatten_dict(dictionary=v, accumulator=accumulator, parent_key=k)
+            continue
+
+        accumulator[k] = v
+
+    return accumulator
+
 class Vocab(object):
     def __init__(self, word2id={}):
         """
@@ -20,4 +34,4 @@ class Vocab(object):
                 break
             _id = len(self.word2id)
             self.word2id.setdefault(word, _id)
-            self.id2word[_id] = word 
+            self.id2word[_id] = word

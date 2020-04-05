@@ -4,6 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+ptvsd = "*"
 
 [packages]
 torch = "*"
@@ -14,6 +15,8 @@ hydra-core = "*"
 tensorboardx = "*"
 mlflow = "*"
 nltk = "*"
+torchtext = "*"
+optuna = "*"
 
 [requires]
 python_version = "3.7"
