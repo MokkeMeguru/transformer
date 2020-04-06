@@ -200,7 +200,7 @@ class Task:
         with torch.no_grad():
             with open(self.basic_params["paths"]["test_base"] + ".en", "r", encoding="utf-8") as f:
                 for line in tqdm(f):
-                    src = [self.src_vocabs.encode(line.strip().split())]
+                    src = [self.src_vocabs.encode(line.strip().split()) + [EOS]]
                     src = torch.tensor(src, dtype=torch.long)
                     src = src.to(self.device)
                     batch_size = src.size(0)
